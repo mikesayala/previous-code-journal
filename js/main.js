@@ -12,18 +12,18 @@ function getPhotoUrl(event) {
 
 function getSubmit(event) {
   event.preventDefault();
-  var formDataModel = [
-    {
-      title: $form.title.value,
-      photoUrl: $form.photo.value,
-      notes: $form.notes.value,
-      entryId: data.nextEntryId++
-    }
-  ];
+  var formDataModel = {
+    title: $form.title.value,
+    photoUrl: $form.photo.value,
+    notes: $form.notes.value,
+    entryId: data.nextEntryId
+  };
 
+  data.nextEntryId++;
   data.entries.push(formDataModel);
   $form.reset();
   if (getSubmit) {
     $newImg.setAttribute('src', 'images/placeholder-image-square.jpg');
+
   }
 }
