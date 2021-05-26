@@ -7,7 +7,6 @@ img {
 body {
   background-color: #f0f0f0;
   font-family: sans-serif;
-  font-weight: bold;
 }
 
 .code-journal {
@@ -30,6 +29,7 @@ body {
 .label {
   margin-top: 15px;
   font-size: 20px;
+  font-weight: bold;
 }
 
 button {
@@ -59,4 +59,16 @@ button {
 .button-container {
   display: flex;
   justify-content: flex-end;
+}
+
+.hidden {
+  display: none;
+}
+
+.text-content {
+  width: 100%;
+}
+
+.list-style-type {
+  list-style-type: none;
 }
