@@ -20,10 +20,9 @@ function getSubmit(event) {
   };
 
   data.nextEntryId++;
-  data.entries.push(formDataModel);
+  data.entries.unshift(formDataModel);
   $form.reset();
   if (getSubmit) {
     $newImg.setAttribute('src', 'images/placeholder-image-square.jpg');
-
   }
 }
