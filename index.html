@@ -15,11 +15,66 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
-  </header>
-  <main>
-  </main>
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
+  <header class="header">
+   <div class="container">
+    <div class="row header-row">
+      <div class="column-full code-journal">
+        <h3>Code Journal</h3>
+      </div>
+    </div>
+  </div>
+   </header>
+  <div class="container">
+   <div data-view="entry-form">
+     <div class="form-container">
+      <main>
+        <form class="form">
+         <div class="row new-entry">
+           <div class="column-full">
+              <h1>New Entry</h1>
+           </div>
+         </div>
+         <div class="row row-image">
+           <div class="column column-full">
+                <img src="images/placeholder-image-square.jpg" id="myId" class="img">
+             <div class="column-full table-photo">
+                <div class="label">
+                  <label for="title">Title</label>
+                </div>
+                <div>
+                  <input name="title" type="text" id="title" class="input" required="required">
+                </div>
+                <div class="label">
+                  <label for="photo-url" class="photo-url">Photo URL</label>
+                </div>
+                <div>
+                  <input type="text" name="photo" id="photo-url" class="input photo-url" required="required">
+                </div>
+             </div>
+           </div>
+          </div>
+         <div class="row">
+           <div class="column-full">
+             <div class="label">
+               <label for="notes">Notes</label>
+             </div>
+             <div class="notes-input">
+               <textarea name="notes" id="notes" class="notes" required="required">
+               </textarea>
+             </div>
+           </div>
+         </div>
+         <div class="row row-button">
+          <div class="column-full button-container">
+            <button class="button">Save</button>
+          </div>
+         </div>
+        </form>
+      </main>
+    </div>
+   <script src="js/data.js"></script>
+   <script src="js/main.js"></script>
+   </div>
+  </div>
 </body>
 </html>
