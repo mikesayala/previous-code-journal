@@ -94,3 +94,21 @@ li {
   width: 100%;
   align-items: center;
 }
+
+.entryLink {
+  color: white;
+  text-decoration: none;
+}
+
+.no-recorded-entries {
+  display: flex;
+  justify-content: center;
+}
+
+.border {
+  border: none;
+}
+
+.tab.active {
+  background-color: lime;
+}

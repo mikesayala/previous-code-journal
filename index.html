@@ -24,7 +24,10 @@
       <!-- <div class="column-full code-journal"> -->
         <h3>Code Journal</h3>
         <div class="row entries-nav">
-          <div data-view="entries" class="view">Entries</div>
+          <!-- <div data-view="entries" class="tab">Entries</div> -->
+          <div class="tab-container">
+            <a href="#" data-view="entries" class="entry code-journal border entryLink">Entries</a>
+          </div>
         </div>
       <!-- </div> -->
     </div>
@@ -37,15 +40,26 @@
     <div class="column">
       <div class="entries-new-button">
           <h2>Entries</h2>
-          <button class="button">New</button>
+          <div class="tab-container">
+            <a href="#" class="code-journal border entryLink">New</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div>
-     <ul class="row row-image ul">
-     </ul>
-     <div class="form-container">
+    <div class="no-entries-container">
+      <div class="none hidden" data-view="entries">
+        <p class="no-recorded-entries">No entries have been recorded</p>
+      </div>
+    </div>
+    <div class="entries-container">
+      <div class="view hidden" data-view="entries">
+        <ul class="row row-image ul">
+        </ul>
+      </div>
+    </div>
+     <div class="form-container view" data-view="entry-form">
       <main>
         <form class="form">
          <div class="row new-entry">
