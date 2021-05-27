@@ -109,6 +109,11 @@ li {
   border: none;
 }
 
-.tab.active {
-  background-color: lime;
+.new-reverse {
+  flex-direction: column-reverse;
+}
+
+.new-button {
+  border-radius: 5px;
+  padding: 8px 18px;
 }

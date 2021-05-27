@@ -36,12 +36,12 @@
   <div class="container">
    <div data-view="entry-form">
    <div data-view="entries">
-  <div class="row">
+  <div class="row new-reverse">
     <div class="column">
       <div class="entries-new-button">
           <h2>Entries</h2>
           <div class="tab-container">
-            <a href="#" class="code-journal border entryLink">New</a>
+            <a href="#" data-view="entry-form" class="new new-button code-journal border entryLink">New</a>
           </div>
         </div>
       </div>
@@ -49,7 +49,7 @@
   </div>
   <div>
     <div class="no-entries-container">
-      <div class="none hidden" data-view="entries">
+      <div class="no-entry view hidden" data-view="entries">
         <p class="no-recorded-entries">No entries have been recorded</p>
       </div>
     </div>

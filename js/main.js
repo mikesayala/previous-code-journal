@@ -77,11 +77,11 @@ function entryContentLoaded(event) {
     $Ul.append(entryObjects);
   }
 }
+var $noEntry = document.querySelector('.no-entry');
 var $entry = document.querySelector('.entry');
 var $viewAll = document.querySelectorAll('.view');
-var $noEntries = document.querySelector('.none');
+// var $noEntries = document.querySelector('.none');
 $entry.addEventListener('click', viewSwitch);
-
 function viewSwitch(event) {
   var matchingDataView = event.target.getAttribute('data-view');
   for (var i = 0; i < $viewAll.length; i++) {
@@ -92,8 +92,24 @@ function viewSwitch(event) {
     }
   }
   if (data.entries.length === 0) {
-    $noEntries.className = 'none';
+    $noEntry.className = 'view';
   } else {
-    $noEntries.className = 'none hidden';
+    $noEntry.className = 'view hidden';
+  }
+}
+// when i click on the new button
+// i need entries to be hidden
+// and the form-container visible
+var $new = document.querySelector('.new');
+$new.addEventListener('click', newEntry);
+
+function newEntry(event) {
+  var newMatchView = event.target.getAttribute('data-view');
+  for (var i = 0; i < $viewAll.length; i++) {
+    if ($viewAll[i].getAttribute('data-view') === newMatchView) {
+      $viewAll[i].className = 'view';
+    } else {
+      $viewAll[i].className = 'view hidden';
+    }
   }
 }
