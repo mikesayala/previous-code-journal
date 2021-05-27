@@ -6,7 +6,7 @@ img {
 
 body {
   background-color: #f0f0f0;
-  font-family: sans-serif;
+  font-family: 'Proza Libre', sans-serif;
 }
 
 .code-journal {
@@ -81,4 +81,16 @@ ul {
 li {
   padding: 0;
   margin: 0;
+}
+
+.entries-nav {
+  margin-left: 2rem;
+  align-content: center;
+}
+
+.entries-new-button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
