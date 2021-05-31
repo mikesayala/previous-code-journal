@@ -32,7 +32,7 @@ function onLoad(event) {
   var view = data.view;
   for (var i = 0; i < $viewAll.length; i++) {
     if (view === $viewAll[i].getAttribute('data-view')) {
-      $viewAll[i].classList.add('view');
+      $viewAll[i].className = 'view';
     } else {
       $viewAll[i].className = 'view hidden';
     }
