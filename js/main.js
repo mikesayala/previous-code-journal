@@ -32,7 +32,7 @@ function onLoad(event) {
   var view = data.view;
   for (var i = 0; i < $viewAll.length; i++) {
     if (view === $viewAll[i].getAttribute('data-view')) {
-      $viewAll[i].className = 'view';
+      $viewAll[i].classList.add('view');
     } else {
       $viewAll[i].className = 'view hidden';
     }
@@ -66,6 +66,10 @@ function getSubmit(event) {
 
   $Ul.prepend(journalEntry(data.entries[0]));
   viewSwitch('entries');
+
+  if (data.length.entries !== 0) {
+    $new.className = 'view';
+  }
 }
 
 function journalEntry(entry) {
@@ -115,10 +119,10 @@ function viewSwitch(viewName) {
       $viewAll[i].className = 'view hidden';
     }
   }
-  if (data.entries.length !== 0) {
-    $noEntry.className = 'view hidden';
-  } else {
+  if (data.entries.length === 0) {
     $noEntry.className = 'view';
+  } else {
+    $noEntry.className = 'view hidden';
   }
 }
 // when i click on the new button
@@ -126,6 +130,7 @@ function viewSwitch(viewName) {
 // and the form-container visible
 
 function newEntry(event) {
+  event.preventDefault();
   data.view = 'entry-form';
   var newMatchView = event.target.getAttribute('data-view');
   for (var i = 0; i < $viewAll.length; i++) {

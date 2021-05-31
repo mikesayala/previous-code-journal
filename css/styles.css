@@ -117,3 +117,9 @@ li {
   border-radius: 5px;
   padding: 8px 18px;
 }
+
+.container-entries {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
