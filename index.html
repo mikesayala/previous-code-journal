@@ -13,20 +13,57 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="header">
    <div class="container">
-    <div class="row header-row">
-      <div class="column-full code-journal">
+    <div class="row header-row code-journal">
+      <!-- <div class="column-full code-journal"> -->
         <h3>Code Journal</h3>
-      </div>
+        <div class="row entries-nav">
+          <!-- <div data-view="entries" class="tab">Entries</div> -->
+          <div class="tab-container">
+            <a href="#" data-view="entries" class="entry code-journal border entryLink">Entries</a>
+          </div>
+        </div>
+      <!-- </div> -->
     </div>
   </div>
    </header>
   <div class="container">
+    <div data-view="entries" class="view">
+      <div class="row new-reverse">
+        <div class="column">
+          <div class="entries-new-button">
+            <h2>Entries</h2>
+            <div class="tab-container">
+              <a href="#" data-view="entry-form" class="new new-button code-journal border entryLink">New</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-view="entry-form" class="container container-entries no-entry">
+        <div class="row new-reverse">
+          <div class="column-full">
+            <div class="no-entries-container view" data-view="entries">
+              <p class="no-recorded-entries">No entries have been recorded</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
    <div data-view="entry-form">
-     <div class="form-container">
+  <div>
+    <div class="entries-container">
+      <div class="view hidden" data-view="entries">
+        <ul class="row row-image ul">
+        </ul>
+      </div>
+    </div>
+     <div class="form-container view" data-view="entry-form">
       <main>
         <form class="form">
          <div class="row new-entry">
@@ -59,8 +96,7 @@
                <label for="notes">Notes</label>
              </div>
              <div class="notes-input">
-               <textarea name="notes" id="notes" class="notes" required="required">
-               </textarea>
+               <textarea name="notes" id="notes" class="notes" required="required"></textarea>
              </div>
            </div>
          </div>
@@ -75,6 +111,7 @@
    <script src="js/data.js"></script>
    <script src="js/main.js"></script>
    </div>
+  </div>
   </div>
 </body>
 </html>
